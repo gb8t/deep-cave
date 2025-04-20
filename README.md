@@ -4,3 +4,6 @@ Projeto de jogo mobile realizado como parte das disciplinas de Desenvolvimento d
 
 ## Sinopse
 No topo de uma grande montanha, uma colônia de anões montou sua base, pretendendo escava-la em busca de riquezas. A descida é mais perigosa do que parece, mas a colônia deve sempre chegar mais fundo, enviando um novo minerador sempre que os ossos do último voltam.
+
+## Requisitos
+- GameMaker Studio 2
