@@ -9,6 +9,6 @@ No topo de uma grande montanha, uma colônia de anões montou sua base, pretende
 - GameMaker Studio 2
 
 ## Participantes
-https://github.com/LMSIB25225
-https://github.com/gb8t
-https://github.com/bellzinn
+- https://github.com/LMSIB25225
+- https://github.com/gb8t
+- https://github.com/bellzinn
