@@ -33,6 +33,8 @@
     {"name":"spr_gem","order":3,"path":"sprites/spr_gem/spr_gem.yy",},
     {"name":"spr_ghost","order":7,"path":"sprites/spr_ghost/spr_ghost.yy",},
     {"name":"spr_hole","order":2,"path":"sprites/spr_hole/spr_hole.yy",},
+    {"name":"spr_joystick_1","order":9,"path":"sprites/spr_joystick_1/spr_joystick_1.yy",},
+    {"name":"spr_joystick_2","order":10,"path":"sprites/spr_joystick_2/spr_joystick_2.yy",},
     {"name":"spr_mole","order":8,"path":"sprites/spr_mole/spr_mole.yy",},
   ],
 }

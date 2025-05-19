@@ -57,6 +57,8 @@
     {"id":{"name":"spr_gem","path":"sprites/spr_gem/spr_gem.yy",},},
     {"id":{"name":"spr_ghost","path":"sprites/spr_ghost/spr_ghost.yy",},},
     {"id":{"name":"spr_hole","path":"sprites/spr_hole/spr_hole.yy",},},
+    {"id":{"name":"spr_joystick_1","path":"sprites/spr_joystick_1/spr_joystick_1.yy",},},
+    {"id":{"name":"spr_joystick_2","path":"sprites/spr_joystick_2/spr_joystick_2.yy",},},
     {"id":{"name":"spr_mole","path":"sprites/spr_mole/spr_mole.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
   ],

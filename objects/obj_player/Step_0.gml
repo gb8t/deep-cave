@@ -1,7 +1,12 @@
-//velocidade para n bugar na intro
-var current_speed = dig_speed;
+// Variáveis
+var move_x = 0;
+var move_y = 0;
+var max_angle = 45;   // Ângulo máximo
+var turn_speed = 2.5; // Velocidade de rotação
+var dig_speed = 2.5;  // Velocidade de escavação
+var intro_y = room_height / 3;  
 
-//toque / clique
+// Joystick
 if (device_mouse_check_button(0, mb_left)) {
     var tx = device_mouse_x_to_gui(0);
     var ty = device_mouse_y_to_gui(0);
@@ -32,59 +37,54 @@ if (device_mouse_check_button(0, mb_left)) {
     move_y = keyboard_check(vk_down) - keyboard_check(vk_up);
 }
 
-//sistema de combustivel
+// Combustível
 if (fuel > 0) {
     if (y >= intro_y) {
         fuel -= fuel_rate;
         if (fuel < 0) fuel = 0;
     }
 } else {
-    room_restart(); //reinicia/fim de jogo  ao acabar o combustivel
+    //room_restart(); // reinicia/fim de jogo  ao acabar o combustivel
 }
 
-//bloquear input na intro
+// Bloquear input na intro
 if (y < intro_y) {
     move_x = 0;
     move_y = 0;
-    current_speed *= 1.5;
+    dig_speed *= 1.5;
 }
 
-if (global.mining != noone) {
-    if (global.mining.hp > 0) {
-        global.mining.hp--;
-        global.screen_shake = 2;
+if (mining != noone) {
+    if (mining.hp > 0) {
+        mining.hp--;
+        shake = 2;
     } else {
-        instance_destroy(global.mining);
-        global.mining = noone;
+        instance_destroy(mining);
+        mining = noone;
     }
-} else if (move_y >= 0) {
-    //girar broca
+} else {
     if (move_x != 0) {
-        drill.image_angle += move_x * turn_speed;
-        drill.image_angle = clamp(drill.image_angle, -max_angle, max_angle);
+        drill.image_angle = clamp(
+			drill.image_angle + move_x * turn_speed,
+			-max_angle,
+			max_angle);
     }
-
     
-    var dx = lengthdir_x(current_speed, drill.image_angle - 90);
-    var dy = lengthdir_y(current_speed, drill.image_angle - 90);
+    var dx = lengthdir_x(dig_speed, drill.image_angle - 90);
+    var dy = lengthdir_y(dig_speed, drill.image_angle - 90);
 
-    x += dx;
-    x = clamp(x, 16, room_width - 16);
+    x = clamp(x + dx, 16, room_width - 16);
 
     if (y < intro_y) {
-        y += dy;
-        y = min(y, intro_y);
+        y = min(y + dy, intro_y);
     } else {
-        global.meters += dy / 32;
+        meters += dy / 32;
 
-        // Move itens para simular descida
+        // Mover itens para simular descida
         with obj_item {
             y -= dy;
         }
     }
-
-    drill.x = x;
-    drill.y = y;
 
     // Criar buracos
     if (!place_meeting(x, y, obj_hole)) {
@@ -96,11 +96,18 @@ if (global.mining != noone) {
 				obj_hole);
 		}
     }
+
+	// Broca
+	with (drill) {
+		x = other.x
+		y = other.y
+		other.mining = instance_place(x, y, obj_gem);
+	}
 }
 
-// Spawn de itens
-if (global.meters >= last_spawn + 1) {
-    last_spawn = global.meters;
+// Spawnar itens
+if (meters >= item_spawn + 1) {
+    item_spawn = meters + random(5);
 
     var _x = random_range(20, room_width - 20);
     var _y = random_range(room_height * 1.5, room_height * 2);
@@ -115,25 +122,24 @@ if (global.meters >= last_spawn + 1) {
 }
 
 // Spawnar inimigos
-if (enemy_spawn > 0) {
-	enemy_spawn--
-} else {
-	enemy_spawn = random_range(100, 500)
+if (meters >= enemy_spawn + 1) {
+	enemy_spawn = meters + random_range(5, 20);
+
 	instance_create_layer(
 		random_range(20, room_width - 20),
 		room_height + 32,
-		"etc",
+		layer,
 		choose(obj_bat))
 }
 
-// Efeito de tremer a tela
-if (global.screen_shake) {
+// Tremer a tela
+if (shake) {
     camera_set_view_pos(
         view_camera[0],
-        random_range(-1, 1) * global.screen_shake,
-        random_range(-1, 1) * global.screen_shake);
+        random_range(-1, 1) * shake,
+        random_range(-1, 1) * shake);
 
-    global.screen_shake = max(0, global.screen_shake - 0.5);
+    shake = max(0, shake - 0.5);
 } else {
     camera_set_view_pos(view_camera[0], 0, 0);
 }
