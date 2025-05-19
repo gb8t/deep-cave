@@ -1,4 +1,4 @@
-scale = random_range(1, 1.5);
-
-image_xscale = scale;
-image_yscale = scale;
+image_xscale = 2
+image_yscale = 2
+image_speed = 0
+image_index = random(image_number)
