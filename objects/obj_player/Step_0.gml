@@ -5,6 +5,7 @@ var max_angle = 45;   // Ângulo máximo
 var turn_speed = 2.5; // Velocidade de rotação
 var dig_speed = 2.5;  // Velocidade de escavação
 var intro_y = room_height / 3;  
+var x_speed = 0, y_speed = 0;
 
 // Joystick
 if (device_mouse_check_button(0, mb_left)) {
@@ -73,19 +74,19 @@ if (mining != noone) {
 			max_angle);
     }
     
-    var dx = lengthdir_x(dig_speed, drill.image_angle - 90);
-    var dy = lengthdir_y(dig_speed, drill.image_angle - 90);
+    x_speed = lengthdir_x(dig_speed, drill.image_angle - 90);
+    y_speed = lengthdir_y(dig_speed, drill.image_angle - 90);
 
-    x = clamp(x + dx, 16, room_width - 16);
+    x = clamp(x + x_speed, 16, room_width - 16);
 
     if (y < intro_y) {
-        y = min(y + dy, intro_y);
+        y = min(y + y_speed, intro_y);
     } else {
-        meters += dy / 32;
+        meters += y_speed / 32;
 
         // Mover itens para simular descida
         with obj_item {
-            y -= dy;
+            y -= y_speed;
         }
     }
 
@@ -145,4 +146,9 @@ if (shake) {
     shake = max(0, shake - 0.5);
 } else {
     camera_set_view_pos(view_camera[0], 0, 0);
+}
+
+// Velocidade do plano de fundo
+if (y >= intro_y) {
+	layer_vspeed("bg", -y_speed);
 }

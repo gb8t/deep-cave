@@ -27,6 +27,7 @@
     {"name":"obj_hole","order":4,"path":"objects/obj_hole/obj_hole.yy",},
     {"name":"obj_item","order":3,"path":"objects/obj_item/obj_item.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"spr_background","order":11,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"spr_bat","order":6,"path":"sprites/spr_bat/spr_bat.yy",},
     {"name":"spr_bomb","order":5,"path":"sprites/spr_bomb/spr_bomb.yy",},
     {"name":"spr_decor","order":4,"path":"sprites/spr_decor/spr_decor.yy",},
