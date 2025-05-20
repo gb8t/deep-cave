@@ -61,6 +61,9 @@ if (mining != noone) {
     } else {
         instance_destroy(mining);
         mining = noone;
+		global.num_minerios += 1
+		global.money += 100;
+
     }
 } else {
     if (move_x != 0) {

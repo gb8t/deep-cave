@@ -53,4 +53,3 @@ if (touch_active) {
 
     draw_set_alpha(1);
 }
-
