@@ -14,7 +14,7 @@ touch_current_x = 0;
 touch_current_y = 0;
 
 item_spawn = 0;
-enemy_spawn = 50;
+enemy_spawn = 20;
 
 // Combustível
 fuel = 100;         // Combustível atual

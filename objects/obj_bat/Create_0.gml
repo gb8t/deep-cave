@@ -2,4 +2,4 @@ image_xscale = 2
 image_yscale = 2
 image_speed = .8
 
-age = random(1000)
+age = random(100)

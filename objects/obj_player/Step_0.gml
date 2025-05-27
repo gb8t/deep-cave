@@ -13,8 +13,8 @@ if (device_mouse_check_button(0, mb_left)) {
     var ty = device_mouse_y_to_gui(0);
 
     if (!touch_active) {
-        touch_start_x = tx;
-        touch_start_y = ty;
+        touch_start_x = display_get_gui_width() / 2;
+        touch_start_y = display_get_gui_height() * .8;
         touch_active = true;
     }
 
@@ -86,7 +86,9 @@ if (mining != noone) {
 
         // Mover itens para simular descida
         with obj_item {
-            y -= y_speed;
+			if object_index != obj_ghost {
+				y -= y_speed;
+			}
         }
     }
 
@@ -127,13 +129,13 @@ if (meters >= item_spawn + 1) {
 
 // Spawnar inimigos
 if (meters >= enemy_spawn + 1) {
-	enemy_spawn = meters + random_range(5, 20);
+	enemy_spawn = meters + random_range(5, 10);
 
 	instance_create_layer(
 		random_range(20, room_width - 20),
 		room_height + 32,
 		layer,
-		choose(obj_bat))
+		choose(obj_bat, obj_ghost, obj_mole))
 }
 
 // Tremer a tela

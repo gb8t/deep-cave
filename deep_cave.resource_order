@@ -24,8 +24,10 @@
     {"name":"obj_decor","order":1,"path":"objects/obj_decor/obj_decor.yy",},
     {"name":"obj_enemy_dead","order":2,"path":"objects/obj_enemy_dead/obj_enemy_dead.yy",},
     {"name":"obj_gem","order":2,"path":"objects/obj_gem/obj_gem.yy",},
+    {"name":"obj_ghost","order":3,"path":"objects/obj_ghost/obj_ghost.yy",},
     {"name":"obj_hole","order":4,"path":"objects/obj_hole/obj_hole.yy",},
     {"name":"obj_item","order":3,"path":"objects/obj_item/obj_item.yy",},
+    {"name":"obj_mole","order":2,"path":"objects/obj_mole/obj_mole.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
     {"name":"spr_background","order":11,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"spr_bat","order":6,"path":"sprites/spr_bat/spr_bat.yy",},
@@ -38,5 +40,6 @@
     {"name":"spr_joystick_1","order":9,"path":"sprites/spr_joystick_1/spr_joystick_1.yy",},
     {"name":"spr_joystick_2","order":10,"path":"sprites/spr_joystick_2/spr_joystick_2.yy",},
     {"name":"spr_mole","order":8,"path":"sprites/spr_mole/spr_mole.yy",},
+    {"name":"spr_tank","order":12,"path":"sprites/spr_tank/spr_tank.yy",},
   ],
 }
