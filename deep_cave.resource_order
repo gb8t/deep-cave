@@ -29,11 +29,16 @@
     {"name":"obj_hole","order":4,"path":"objects/obj_hole/obj_hole.yy",},
     {"name":"obj_item","order":3,"path":"objects/obj_item/obj_item.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
+<<<<<<< HEAD
     {"name":"inicial","order":2,"path":"rooms/inicial/inicial.yy",},
     {"name":"loja","order":1,"path":"rooms/loja/loja.yy",},
     {"name":"carregar_jogo","order":1,"path":"scripts/carregar_jogo/carregar_jogo.yy",},
     {"name":"resetar_save","order":2,"path":"scripts/resetar_save/resetar_save.yy",},
     {"name":"upgrade_tanque","order":3,"path":"scripts/upgrade_tanque/upgrade_tanque.yy",},
+=======
+    {"name":"carregar_jogo","order":1,"path":"scripts/carregar_jogo/carregar_jogo.yy",},
+    {"name":"resetar_save","order":2,"path":"scripts/resetar_save/resetar_save.yy",},
+>>>>>>> b7a477157fee748d4bfd8caec0696b4b3e4b9811
     {"name":"spr_background","order":11,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"spr_bat","order":6,"path":"sprites/spr_bat/spr_bat.yy",},
     {"name":"spr_bomb","order":5,"path":"sprites/spr_bomb/spr_bomb.yy",},
