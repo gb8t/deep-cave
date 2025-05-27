@@ -53,3 +53,17 @@ if (touch_active) {
 
     draw_set_alpha(1);
 }
+
+/*
+// Teste das variaveis do save
+draw_set_font(-1); // Fonte padrão
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
+
+
+draw_text(20, 110, "Dinheiro: R$" + string(global.money));
+draw_text(20, 130, "Minérios: " + string(global.num_minerios));
+draw_text(20, 150, "Nível do Tanque: " + string(global.nivelTanque));
+
+*/

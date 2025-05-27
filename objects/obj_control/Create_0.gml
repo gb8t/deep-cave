@@ -1,17 +1,20 @@
+// Definir o nome do arquivo de save
+global.save_file = "savegame.sav";
+
+// Tenta carregar o save
+if (!carregar_jogo()) {
+    // Se não carregou, inicializa os valores padrão
+    global.money = 0;        // Dinheiro inicial
+    global.num_minerios = 0; // Quantidade de minerios inicial
+    global.nivelTanque = 0;  // Nivel do tanque
+}
+
 // Referência global para o controlador
 global.game = id;
 
-// Variáveis
-global.money = 0; // Dinheiro a ser usado nos upgrades
-global.num_minerios = 0; // Pode ser usado para mostrar recorde nas estatisticas ao fim da partida
+// Sistema de upgrades/loja
 
-// Sistema de save/load
-global.save_file = "savegame.sav";
+// Tanque de combustível
+global.precoTanqueBase = 100;     // Preço inicial
+global.aumentoPrecoTanque = 50;   // Quanto o preco aumenta a cada nivel
 
-// Tenta carregar os dados salvos
-if (file_exists(global.save_file)) {
-    var buffer = buffer_load(global.save_file);
-    global.money = buffer_read(buffer, buffer_u32);
-    global.num_minerios = buffer_read(buffer, buffer_u32);
-    buffer_delete(buffer);
-}
