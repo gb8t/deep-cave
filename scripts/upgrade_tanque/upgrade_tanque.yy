@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"upgrade_tanque",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"upgrade_tanque",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

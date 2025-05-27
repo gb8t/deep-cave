@@ -45,6 +45,7 @@ if (fuel > 0) {
         if (fuel < 0) fuel = 0;
     }
 } else {
+	//salvar_jogo()
     //room_restart(); // reinicia/fim de jogo  ao acabar o combustivel
 }
 
