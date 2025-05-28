@@ -1,29 +1,34 @@
-draw_set_color(c_white);
-draw_set_halign(fa_left);
-draw_set_font(fn_font2);
-draw_text(20, 20, string_format(meters, 1, 2) + "m");
+display_set_gui_size(72, 128);
 
-/*
-draw_set_halign(fa_right);
-draw_set_font(fn_font1);
-draw_text(view_wport - 52, 20, score);
-draw_sprite(spr_gem, 0, view_wport - 26, 60);
-*/
+draw_set_font(global.font)
+draw_set_color(c_white);
+
+// Profundidade
+draw_text(2, 2, string_format(meters, 1, 2) + "M");
+
+// Gemas
+var num = [gems, keys]
+for (var i = 0; i < 2; i++) {
+	draw_sprite(spr_icon, i, 2, 12 + i * 8)
+	draw_text(12, 12+ i * 8, num[i])
+}
 
 // Combustível
-var bar_w = 40;
-var bar_h = 80;
-var bar_x = view_wport - 20 - bar_w;
-var bar_y = 20;
+var bar_w = 8;
+var bar_h = 16;
+var bar_x = 72 - 3 - bar_w;
+var bar_y = 2;
 var fuel_percent = fuel / fuel_max;
 
-draw_set_color(c_gray);
+draw_set_color(c_black);
+draw_set_alpha(.5);
 draw_rectangle(
 	bar_x, bar_y,
 	bar_x + bar_w,
 	bar_y + bar_h,
 	false);
 draw_set_color(c_lime);
+draw_set_alpha(1);
 draw_rectangle(
 	bar_x,
 	bar_y + bar_h * (1 - fuel_percent),
@@ -32,27 +37,25 @@ draw_rectangle(
 	false);
 
 // Joystick
+draw_set_alpha(.5);
 if (touch_active) {
     var base_x = touch_start_x;
     var base_y = touch_start_y;
-    draw_sprite_ext(spr_joystick_1, 0, base_x, base_y,
-		6, 6, 0, -1, .5);
+    draw_sprite(spr_joystick_1, 0, base_x, base_y)
 
     var cur_x = touch_current_x;
     var cur_y = touch_current_y;
 
     var dist = point_distance(base_x, base_y, cur_x, cur_y);
-    if (dist > 80) {
+    if (dist > 16) {
         var angle = point_direction(base_x, base_y, cur_x, cur_y);
-        cur_x = base_x + lengthdir_x(80, angle);
-        cur_y = base_y + lengthdir_y(80, angle);
+        cur_x = base_x + lengthdir_x(16, angle);
+        cur_y = base_y + lengthdir_y(16, angle);
     }
 
-    draw_sprite_ext(spr_joystick_2, 0, cur_x, cur_y,
-		6, 6, 0, -1, .5);
-
-    draw_set_alpha(1);
+    draw_sprite(spr_joystick_2, 0, cur_x, cur_y)
 }
+draw_set_alpha(1);
 
 /*
 // Teste das variaveis do save

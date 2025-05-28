@@ -1,4 +1,4 @@
-/// Salva os dados do jogo em arquivo
+  /// Salva os dados do jogo em arquivo
 function salvar_jogo() {
     // Calcula o tamanho necessário (3 inteiros: money, num_minerios, nivelTanque)
     var buffer = buffer_create(12, buffer_fixed, 1); // 3 x 4 bytes

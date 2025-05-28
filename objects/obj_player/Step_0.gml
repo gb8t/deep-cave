@@ -3,7 +3,7 @@ var move_x = 0;
 var move_y = 0;
 var max_angle = 45;   // Ângulo máximo
 var turn_speed = 2.5; // Velocidade de rotação
-var dig_speed = 2.5;  // Velocidade de escavação
+var dig_speed = 1.25;  // Velocidade de escavação
 var intro_y = room_height / 3;  
 var x_speed = 0, y_speed = 0;
 
@@ -65,9 +65,9 @@ if (mining != noone) {
         mining = noone;
 		global.num_minerios += 1
 		global.money += 100;
-
+		gems++
     }
-} else {
+} else if (move_y >= 0) {
     if (move_x != 0) {
         drill.image_angle = clamp(
 			drill.image_angle + move_x * turn_speed,

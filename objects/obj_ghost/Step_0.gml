@@ -2,14 +2,10 @@ event_inherited()
 
 var player = instance_nearest(x, y, obj_player)
 var dir = point_direction(x, y, player.x, player.y)
-hspeed = lengthdir_x(1, dir)
-vspeed = lengthdir_y(1, dir)
+hspeed = lengthdir_x(.5, dir)
+vspeed = lengthdir_y(.5, dir)
 
-if player.x > x {
-	image_xscale = -2
-} else {
-	image_xscale = 2
-}
+image_xscale = sign(x - player.x)
 
 if (device_mouse_check_button(0, mb_left)) {
     var tx = device_mouse_x(0);

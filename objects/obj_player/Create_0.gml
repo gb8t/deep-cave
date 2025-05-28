@@ -1,6 +1,3 @@
-image_xscale = 2;
-image_yscale = 2;
-
 meters = 0; // Profundidade
 shake = 0;  // Tremor de tela
 
@@ -24,3 +21,6 @@ fuel_rate = 0.1;    // Gasto de combustivel
 // Broca
 drill = instance_create_layer(x, y, layer, obj_drill);
 drill.depth = -1;
+
+gems = 0
+keys = 0

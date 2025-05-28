@@ -18,3 +18,4 @@ global.game = id;
 global.precoTanqueBase = 100;     // Preço inicial
 global.aumentoPrecoTanque = 50;   // Quanto o preco aumenta a cada nivel
 
+global.font = font_add_sprite(spr_font, ord(" "), false, 0)
