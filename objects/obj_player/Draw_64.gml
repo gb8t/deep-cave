@@ -1,4 +1,4 @@
-display_set_gui_size(72, 128);
+display_set_gui_size(room_width, room_height);
 
 draw_set_font(global.font)
 draw_set_color(c_white);
@@ -16,7 +16,7 @@ for (var i = 0; i < 2; i++) {
 // Combustível
 var bar_w = 8;
 var bar_h = 16;
-var bar_x = 72 - 3 - bar_w;
+var bar_x = room_width - 3 - bar_w;
 var bar_y = 2;
 var fuel_percent = fuel / fuel_max;
 
