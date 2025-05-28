@@ -2,6 +2,8 @@ display_set_gui_size(room_width, room_height);
 
 draw_set_font(global.font)
 draw_set_color(c_white);
+draw_set_halign(fa_left)
+draw_set_valign(fa_top)
 
 // Profundidade
 draw_text(2, 2, string_format(meters, 1, 2) + "M");
@@ -64,9 +66,13 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
 
-
 draw_text(20, 110, "Dinheiro: R$" + string(global.money));
 draw_text(20, 130, "Minérios: " + string(global.num_minerios));
 draw_text(20, 150, "Nível do Tanque: " + string(global.nivelTanque));
+*/
 
+/*
+var w = (room_width - 16) / 16
+var h = (room_height - 16) / 16
+draw_sprite_ext(spr_menu, 0, 8, 8, w, h, 0, -1, 1)
 */

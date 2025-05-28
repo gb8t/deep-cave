@@ -1,3 +1,5 @@
+randomize()
+
 // Definir o nome do arquivo de save
 global.save_file = "savegame.sav";
 

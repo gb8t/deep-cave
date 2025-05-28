@@ -1,13 +1,15 @@
-draw_set_color(c_black);
-draw_set_font(-1); // Fonte padrão
+display_set_gui_size(room_width, room_height);
+
+draw_set_font(global.font)
+draw_set_halign(fa_center)
+draw_set_valign(fa_center)
 
 // Botão Jogar
-draw_rectangle(btn_jogar_x, btn_jogar_y, btn_jogar_x + btn_jogar_w, btn_jogar_y + btn_jogar_h, false);
-draw_set_color(c_white);
-draw_text(btn_jogar_x + 50, btn_jogar_y + 15, "Jogar");
+draw_sprite_ext(spr_menu, btn_jogar_down ? 2 : 1, btn_jogar_x, btn_jogar_y, btn_jogar_w / 16, btn_jogar_h / 16, 0, -1, 1)
+draw_set_color(btn_jogar_down ? c_ltgray : c_white)
+draw_text(room_width / 2, btn_jogar_y + btn_jogar_h / 2, "JOGAR");
 
 // Botão Loja
-draw_set_color(c_black);
-draw_rectangle(btn_loja_x, btn_loja_y, btn_loja_x + btn_loja_w, btn_loja_y + btn_loja_h, false);
-draw_set_color(c_white);
-draw_text(btn_loja_x + 70, btn_loja_y + 15, "Loja");
+draw_sprite_ext(spr_menu, btn_loja_down ? 2 : 1, btn_loja_x, btn_loja_y, btn_loja_w / 16, btn_loja_h / 16, 0, -1, 1)
+draw_set_color(btn_loja_down ? c_ltgray : c_white)
+draw_text(room_width / 2, btn_loja_y + btn_loja_h / 2, "LOJA");

@@ -116,16 +116,11 @@ if (mining != noone) {
 if (meters >= item_spawn + 1) {
     item_spawn = meters + random(5);
 
-    var _x = random_range(20, room_width - 20);
-    var _y = random_range(room_height * 1.5, room_height * 2);
-
-    if (random(1)) {
-        instance_create_layer(_x, _y, "decor", obj_decor);
-    } else if (!random(2)) {
-        instance_create_layer(_x, _y, layer, obj_bomb);
-    } else {
-        instance_create_layer(_x, _y, layer, obj_gem);
-    }
+	instance_create_layer(
+		random_range(20, room_width - 20),
+		random_range(room_height * 1.5, room_height * 2),
+		layer,
+		choose(obj_bomb, obj_gem, obj_decor));
 }
 
 // Spawnar inimigos
