@@ -30,6 +30,7 @@
     {"name":"obj_item","order":3,"path":"objects/obj_item/obj_item.yy",},
     {"name":"obj_mole","order":2,"path":"objects/obj_mole/obj_mole.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"obj_shine","order":6,"path":"objects/obj_shine/obj_shine.yy",},
     {"name":"inicial","order":2,"path":"rooms/inicial/inicial.yy",},
     {"name":"loja","order":1,"path":"rooms/loja/loja.yy",},
     {"name":"carregar_jogo","order":1,"path":"scripts/carregar_jogo/carregar_jogo.yy",},
@@ -39,6 +40,7 @@
     {"name":"spr_bat","order":6,"path":"sprites/spr_bat/spr_bat.yy",},
     {"name":"spr_bomb","order":5,"path":"sprites/spr_bomb/spr_bomb.yy",},
     {"name":"spr_decor","order":4,"path":"sprites/spr_decor/spr_decor.yy",},
+    {"name":"spr_dirt","order":19,"path":"sprites/spr_dirt/spr_dirt.yy",},
     {"name":"spr_drill","order":1,"path":"sprites/spr_drill/spr_drill.yy",},
     {"name":"spr_font","order":17,"path":"sprites/spr_font/spr_font.yy",},
     {"name":"spr_gem","order":3,"path":"sprites/spr_gem/spr_gem.yy",},
@@ -48,6 +50,7 @@
     {"name":"spr_joystick_1","order":9,"path":"sprites/spr_joystick_1/spr_joystick_1.yy",},
     {"name":"spr_joystick_2","order":10,"path":"sprites/spr_joystick_2/spr_joystick_2.yy",},
     {"name":"spr_mole","order":8,"path":"sprites/spr_mole/spr_mole.yy",},
+    {"name":"spr_shine","order":18,"path":"sprites/spr_shine/spr_shine.yy",},
     {"name":"spr_tank","order":12,"path":"sprites/spr_tank/spr_tank.yy",},
   ],
 }
