@@ -3,7 +3,7 @@ var move_x = 0;
 var move_y = 0;
 var max_angle = 45;   // Ângulo máximo
 var turn_speed = 2.5; // Velocidade de rotação
-var dig_speed = 2.5;  // Velocidade de escavação
+var dig_speed_intro = 1.25;  // Velocidade de escavação
 var intro_y = room_height / 3;  
 var x_speed = 0, y_speed = 0;
 
@@ -13,8 +13,8 @@ if (device_mouse_check_button(0, mb_left)) {
     var ty = device_mouse_y_to_gui(0);
 
     if (!touch_active) {
-        touch_start_x = tx;
-        touch_start_y = ty;
+        touch_start_x = display_get_gui_width() / 2;
+        touch_start_y = display_get_gui_height() * .8;
         touch_active = true;
     }
 
@@ -53,7 +53,7 @@ if (fuel > 0) {
 if (y < intro_y) {
     move_x = 0;
     move_y = 0;
-    dig_speed *= 1.5;
+    dig_speed_intro *= 1.5;
 }
 
 if (mining != noone) {
@@ -64,10 +64,11 @@ if (mining != noone) {
         instance_destroy(mining);
         mining = noone;
 		global.num_minerios += 1
-		global.money += 100;
-
+		global.money += 150 * sorte;
+		gems++
+		salvar_jogo()
     }
-} else {
+} else if (move_y >= 0) {
     if (move_x != 0) {
         drill.image_angle = clamp(
 			drill.image_angle + move_x * turn_speed,
@@ -87,7 +88,9 @@ if (mining != noone) {
 
         // Mover itens para simular descida
         with obj_item {
-            y -= y_speed;
+			if object_index != obj_ghost {
+				y -= y_speed;
+			}
         }
     }
 
@@ -114,27 +117,22 @@ if (mining != noone) {
 if (meters >= item_spawn + 1) {
     item_spawn = meters + random(5);
 
-    var _x = random_range(20, room_width - 20);
-    var _y = random_range(room_height * 1.5, room_height * 2);
-
-    if (random(1)) {
-        instance_create_layer(_x, _y, "decor", obj_decor);
-    } else if (!random(2)) {
-        instance_create_layer(_x, _y, layer, obj_bomb);
-    } else {
-        instance_create_layer(_x, _y, layer, obj_gem);
-    }
+	instance_create_layer(
+		random_range(20, room_width - 20),
+		random_range(room_height * 1.5, room_height * 2),
+		layer,
+		choose(obj_bomb, obj_gem, obj_decor));
 }
 
 // Spawnar inimigos
 if (meters >= enemy_spawn + 1) {
-	enemy_spawn = meters + random_range(5, 20);
+	enemy_spawn = meters + random_range(5, 10);
 
 	instance_create_layer(
 		random_range(20, room_width - 20),
 		room_height + 32,
 		layer,
-		choose(obj_bat))
+		choose(obj_bat, obj_ghost, obj_mole))
 }
 
 // Tremer a tela
