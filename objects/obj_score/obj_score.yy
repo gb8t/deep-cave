@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_btn_credits",
+  "%Name":"obj_score",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_btn_credits",
+  "name":"obj_score",
   "overriddenProperties":[],
   "parent":{
-    "name":"menu_inicial",
-    "path":"folders/Objects/menu_inicial.yy",
+    "name":"menu",
+    "path":"folders/Objects/menu.yy",
   },
-  "parentObjectId":{
-    "name":"obj_btn",
-    "path":"objects/obj_btn/obj_btn.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

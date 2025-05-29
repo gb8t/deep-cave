@@ -63,10 +63,7 @@ if (mining != noone) {
     } else {
         instance_destroy(mining);
         mining = noone;
-		global.num_minerios += 1
-		global.money += 150 * sorte;
 		gems++
-		salvar_jogo()
     }
 } else if (move_y >= 0) {
     if (move_x != 0) {
@@ -115,7 +112,7 @@ if (mining != noone) {
 
 // Spawnar itens
 if (meters >= item_spawn + 1) {
-    item_spawn = meters + random(5);
+    item_spawn = meters + random(2);
 
 	instance_create_layer(
 		random_range(20, room_width - 20),
@@ -150,4 +147,18 @@ if (shake) {
 // Velocidade do plano de fundo
 if (y >= intro_y) {
 	layer_vspeed("bg", -y_speed);
+}
+
+if (dead > 0) {
+	with (instance_create_layer(x, y, layer, obj_player_dead)) {
+		image_index = other.dead - 1
+	}
+	with (instance_create_layer(x, y, layer, obj_fall)) {
+		sprite_index = spr_drill_1
+	}
+	global.money += gems * 100
+	global.player = noone
+	layer_vspeed("bg", 0)
+	instance_destroy(drill)
+	instance_destroy()
 }

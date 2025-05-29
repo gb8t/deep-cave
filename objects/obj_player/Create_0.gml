@@ -21,7 +21,6 @@ fuel_rate = 0.2 - (global.nivelMotorEficiencia * 0.02);    // Gasto de combustiv
 // Broca
 drill = instance_create_layer(x, y, layer, obj_drill);
 drill.depth--
-drill.player = id
 
 // motor
 dig_speed = 1.0 +( global.nivelMotor * 0.1);  // Velocidade de escavação
@@ -29,6 +28,9 @@ dig_speed = 1.0 +( global.nivelMotor * 0.1);  // Velocidade de escavação
 //Sorte
 sorte = 1 +(global.nivelSorte * 0.4)   // Sorte
 
-// Layout
 gems = 0
 keys = 0
+
+dead = 0
+
+global.player = id

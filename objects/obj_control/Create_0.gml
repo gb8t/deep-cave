@@ -1,10 +1,12 @@
 randomize()
 
-// Definir o nome do arquivo de save
+// Arquivo de save
 global.save_file = "savegame.sav";
 
+// Referência global para o controlador
+global.game = id;
+
 global.money = 0;        // Dinheiro inicial
-global.num_minerios = 0; // Quantidade de minerios inicial
 global.nivelTanque = 0;  // Nivel do tanque
 global.nivelMotor = 0;   // Nivel do motor
 global.nivelMotorEficiencia = 0; // Nivel da eficiencia de consumo do motor
@@ -12,9 +14,6 @@ global.nivelSorte = 0;    // Nivel da sorte, influencia no dinheiro ganho
 
 // Tenta carregar o save
 carregar_jogo()
-
-// Referência global para o controlador
-global.game = id;
 
 // Sistema de upgrades/loja
 
@@ -55,7 +54,7 @@ global.preco_upgrade_sorte = function () {
 //------------------------------------------------------------------------------------
 // APENAS TESTE, para ver se as melhorias estão sendo aplicadas ou se o save ta tudo certo
 
-global.money = 1000000000 // Para n precisar jogar na fase de desenvolvimento
+//global.money = 1000000000 // Para n precisar jogar na fase de desenvolvimento
 show_debug_message("===== STATUS DE MELHORIAS =====");
 show_debug_message("Dinheiro: R$" + string(global.money));
 show_debug_message("Minérios: " + string(global.num_minerios));
@@ -64,7 +63,6 @@ show_debug_message("Nível do Motor: " + string(global.nivelMotor));
 show_debug_message("Eficiência do Motor: " + string(global.nivelMotorEficiencia));
 show_debug_message("Nível de Sorte: " + string(global.nivelSorte));
 show_debug_message("================================");
-
 
 global.font = font_add_sprite(spr_font, ord(" "), false, 0)
 
