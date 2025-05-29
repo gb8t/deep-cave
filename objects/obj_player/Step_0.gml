@@ -3,11 +3,7 @@ var move_x = 0;
 var move_y = 0;
 var max_angle = 45;   // Ângulo máximo
 var turn_speed = 2.5; // Velocidade de rotação
-<<<<<<< HEAD
 var dig_speed_intro = 1.25;  // Velocidade de escavação
-=======
-var dig_speed = 1.25;  // Velocidade de escavação
->>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f
 var intro_y = room_height / 3;  
 var x_speed = 0, y_speed = 0;
 
@@ -68,14 +64,9 @@ if (mining != noone) {
         instance_destroy(mining);
         mining = noone;
 		global.num_minerios += 1
-<<<<<<< HEAD
 		global.money += 150 * sorte;
 		gems++
 		salvar_jogo()
-=======
-		global.money += 100;
-		gems++
->>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f
     }
 } else if (move_y >= 0) {
     if (move_x != 0) {

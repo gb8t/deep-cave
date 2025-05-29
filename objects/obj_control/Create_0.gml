@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 randomize()
 
-=======
-randomize()
-
->>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f
 // Definir o nome do arquivo de save
 global.save_file = "savegame.sav";
 
@@ -28,7 +23,6 @@ global.game = id;
 // Tanque de combustível:
 global.precoTanqueBase = 1000;     // Preço inicial
 
-<<<<<<< HEAD
 // Calcula o preço atual do upgrade do tanque, exponencialmente
 global.preco_upgrade_tanque = function () {
     return floor(global.precoTanqueBase * power(2, global.nivelTanque));
@@ -74,6 +68,3 @@ show_debug_message("================================");
 
 
 global.font = font_add_sprite(spr_font, ord(" "), false, 0)
-=======
-global.font = font_add_sprite(spr_font, ord(" "), false, 0)
->>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f

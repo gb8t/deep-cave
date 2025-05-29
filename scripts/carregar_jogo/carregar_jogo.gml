@@ -1,7 +1,6 @@
 function carregar_jogo() {
     if (file_exists(global.save_file)) {
         var buffer = buffer_load(global.save_file);
-<<<<<<< HEAD
         var tamanho = buffer_get_size(buffer);
 
         // Evita erro caso tenha um save antigo
@@ -14,16 +13,6 @@ function carregar_jogo() {
 
         buffer_delete(buffer);
         return true;
-=======
-
-        global.money = buffer_read(buffer, buffer_u32);
-        global.num_minerios = buffer_read(buffer, buffer_u32);
-        global.nivelTanque = buffer_read(buffer, buffer_u32);
-
-        buffer_delete(buffer);
-		
-        return true; // carregou com sucesso
->>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f
     }
     return false;
 }
