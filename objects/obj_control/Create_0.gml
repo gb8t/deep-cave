@@ -3,16 +3,15 @@ randomize()
 // Definir o nome do arquivo de save
 global.save_file = "savegame.sav";
 
+global.money = 0;        // Dinheiro inicial
+global.num_minerios = 0; // Quantidade de minerios inicial
+global.nivelTanque = 0;  // Nivel do tanque
+global.nivelMotor = 0;   // Nivel do motor
+global.nivelMotorEficiencia = 0; // Nivel da eficiencia de consumo do motor
+global.nivelSorte = 0;    // Nivel da sorte, influencia no dinheiro ganho
+
 // Tenta carregar o save
-if (!carregar_jogo()) {
-    // Se não carregou, inicializa os valores padrão
-    global.money = 0;        // Dinheiro inicial
-    global.num_minerios = 0; // Quantidade de minerios inicial
-    global.nivelTanque = 0;  // Nivel do tanque
-	global.nivelMotor = 0;   // Nivel do motor
-	global.nivelMotorEficiencia = 0; // Nivel da eficiencia de consumo do motor
-	global.nivelSorte = 0;    // Nivel da sorte, influencia no dinheiro ganho
-}
+carregar_jogo()
 
 // Referência global para o controlador
 global.game = id;
