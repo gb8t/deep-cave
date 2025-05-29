@@ -22,6 +22,7 @@ fuel_rate = 0.2 - (global.nivelMotorEficiencia * 0.02);    // Gasto de combustiv
 drill = instance_create_layer(x, y, layer, obj_drill);
 drill.depth = -1;
 
+<<<<<<< HEAD
 // motor
 dig_speed = 1.0 +( global.nivelMotor * 0.1);  // Velocidade de escavação
 
@@ -29,5 +30,7 @@ dig_speed = 1.0 +( global.nivelMotor * 0.1);  // Velocidade de escavação
 sorte = 1 +(global.nivelSorte * 0.4)   // Sorte
 
 // Layout
+=======
+>>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f
 gems = 0
 keys = 0

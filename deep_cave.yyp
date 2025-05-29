@@ -41,25 +41,41 @@
   "resources":[
     {"id":{"name":"obj_bat","path":"objects/obj_bat/obj_bat.yy",},},
     {"id":{"name":"obj_bomb","path":"objects/obj_bomb/obj_bomb.yy",},},
+<<<<<<< HEAD
     {"id":{"name":"obj_btn_play","path":"objects/obj_btn_play/obj_btn_play.yy",},},
     {"id":{"name":"obj_btn_store","path":"objects/obj_btn_store/obj_btn_store.yy",},},
     {"id":{"name":"obj_btn","path":"objects/obj_btn/obj_btn.yy",},},
+=======
+    {"id":{"name":"obj_btn","path":"objects/obj_btn/obj_btn.yy",},},
+    {"id":{"name":"obj_btn_play","path":"objects/obj_btn_play/obj_btn_play.yy",},},
+    {"id":{"name":"obj_btn_store","path":"objects/obj_btn_store/obj_btn_store.yy",},},
+>>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
     {"id":{"name":"obj_decor","path":"objects/obj_decor/obj_decor.yy",},},
     {"id":{"name":"obj_drill","path":"objects/obj_drill/obj_drill.yy",},},
-    {"id":{"name":"obj_enemy_dead","path":"objects/obj_enemy_dead/obj_enemy_dead.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
+    {"id":{"name":"obj_enemy_dead","path":"objects/obj_enemy_dead/obj_enemy_dead.yy",},},
     {"id":{"name":"obj_gem","path":"objects/obj_gem/obj_gem.yy",},},
+<<<<<<< HEAD
     {"id":{"name":"obj_ghost_dead","path":"objects/obj_ghost_dead/obj_ghost_dead.yy",},},
     {"id":{"name":"obj_ghost","path":"objects/obj_ghost/obj_ghost.yy",},},
+=======
+    {"id":{"name":"obj_ghost","path":"objects/obj_ghost/obj_ghost.yy",},},
+    {"id":{"name":"obj_ghost_dead","path":"objects/obj_ghost_dead/obj_ghost_dead.yy",},},
+>>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f
     {"id":{"name":"obj_hole","path":"objects/obj_hole/obj_hole.yy",},},
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},},
     {"id":{"name":"obj_loja","path":"objects/obj_loja/obj_loja.yy",},},
     {"id":{"name":"obj_menu_inicial","path":"objects/obj_menu_inicial/obj_menu_inicial.yy",},},
     {"id":{"name":"obj_mole","path":"objects/obj_mole/obj_mole.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+<<<<<<< HEAD
     {"id":{"name":"obj_shine_1","path":"objects/obj_shine_1/obj_shine_1.yy",},},
     {"id":{"name":"obj_shine","path":"objects/obj_shine/obj_shine.yy",},},
+=======
+    {"id":{"name":"obj_shine","path":"objects/obj_shine/obj_shine.yy",},},
+    {"id":{"name":"obj_shine_1","path":"objects/obj_shine_1/obj_shine_1.yy",},},
+>>>>>>> d33f587a038d1dbcb3761b2f7dac729716d2124f
     {"id":{"name":"inicial","path":"rooms/inicial/inicial.yy",},},
     {"id":{"name":"loja","path":"rooms/loja/loja.yy",},},
     {"id":{"name":"room1","path":"rooms/room1/room1.yy",},},
