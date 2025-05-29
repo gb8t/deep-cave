@@ -22,8 +22,11 @@
   "ResourceOrderSettings":[
     {"name":"obj_bat","order":1,"path":"objects/obj_bat/obj_bat.yy",},
     {"name":"obj_btn","order":3,"path":"objects/obj_btn/obj_btn.yy",},
+<<<<<<< HEAD
     {"name":"obj_btn_config","order":6,"path":"objects/obj_btn_config/obj_btn_config.yy",},
     {"name":"obj_btn_credits","order":5,"path":"objects/obj_btn_credits/obj_btn_credits.yy",},
+=======
+>>>>>>> a06c3f08c790ee1be2531a736f89fe846f09a366
     {"name":"obj_btn_play","order":1,"path":"objects/obj_btn_play/obj_btn_play.yy",},
     {"name":"obj_btn_store","order":4,"path":"objects/obj_btn_store/obj_btn_store.yy",},
     {"name":"obj_control","order":3,"path":"objects/obj_control/obj_control.yy",},
