@@ -100,7 +100,7 @@ if (mining != noone) {
 			instance_create_layer(
 				x + random_range(-5, 5),
 				y + random_range(-5, 5),
-				layer,
+				"hole",
 				obj_hole);
 		}
     }
@@ -120,7 +120,7 @@ if (meters >= item_spawn + 1) {
 	instance_create_layer(
 		random_range(20, room_width - 20),
 		random_range(room_height * 1.5, room_height * 2),
-		layer,
+		"item",
 		choose(obj_bomb, obj_gem, obj_decor));
 }
 
@@ -131,7 +131,7 @@ if (meters >= enemy_spawn + 1) {
 	instance_create_layer(
 		random_range(20, room_width - 20),
 		room_height + 32,
-		layer,
+		"enemy",
 		choose(obj_bat, obj_ghost, obj_mole))
 }
 

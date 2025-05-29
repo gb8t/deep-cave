@@ -67,3 +67,5 @@ show_debug_message("================================");
 
 
 global.font = font_add_sprite(spr_font, ord(" "), false, 0)
+
+global.flash_alpha = 0

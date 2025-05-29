@@ -14,7 +14,7 @@ if (device_mouse_check_button(0, mb_left)) {
     var ty = device_mouse_y(0);
 	
 	if point_distance(tx, ty, x, y) < 32 {
-		with (instance_create_depth(x, y, depth, obj_ghost_dead)) {
+		with (instance_create_layer(x, y, layer, obj_ghost_dead)) {
 			image_xscale = other.image_xscale
 		}
 		instance_destroy()
