@@ -1,0 +1,1 @@
+text = "MOTOR: " + string(global.nivelMotor)

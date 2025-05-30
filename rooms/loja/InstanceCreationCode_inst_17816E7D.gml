@@ -1,0 +1,1 @@
+text = "EFIC.: " + string(global.nivelMotorEficiencia)

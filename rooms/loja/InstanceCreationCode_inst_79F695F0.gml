@@ -1,0 +1,1 @@
+text = "TANQUE: " + string(global.nivelTanque)

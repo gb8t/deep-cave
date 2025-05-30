@@ -1,6 +1,6 @@
-image_speed = 0
+event_inherited()
+
 image_index = 1
 
 text = ""
-press = function() {
-}
+press = function() {}

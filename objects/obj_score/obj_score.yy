@@ -12,7 +12,10 @@
     "name":"menu",
     "path":"folders/Objects/menu.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_panel",
+    "path":"objects/obj_panel/obj_panel.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
