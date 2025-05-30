@@ -34,3 +34,5 @@ keys = 0
 dead = 0
 
 global.player = id
+
+image_speed = .5

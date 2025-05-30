@@ -26,6 +26,7 @@
     {"name":"obj_drill","order":1,"path":"objects/obj_drill/obj_drill.yy",},
     {"name":"obj_explosion_hole","order":7,"path":"objects/obj_explosion_hole/obj_explosion_hole.yy",},
     {"name":"obj_fall","order":4,"path":"objects/obj_fall/obj_fall.yy",},
+    {"name":"obj_fuel","order":8,"path":"objects/obj_fuel/obj_fuel.yy",},
     {"name":"obj_hit","order":1,"path":"objects/obj_hit/obj_hit.yy",},
     {"name":"obj_hole","order":3,"path":"objects/obj_hole/obj_hole.yy",},
     {"name":"obj_item","order":4,"path":"objects/obj_item/obj_item.yy",},
@@ -36,6 +37,7 @@
     {"name":"obj_shine","order":3,"path":"objects/obj_shine/obj_shine.yy",},
     {"name":"spr_drill_1","order":3,"path":"sprites/spr_drill_1/spr_drill_1.yy",},
     {"name":"spr_explosion_hole","order":2,"path":"sprites/spr_explosion_hole/spr_explosion_hole.yy",},
+    {"name":"spr_fuel","order":4,"path":"sprites/spr_fuel/spr_fuel.yy",},
     {"name":"spr_player_dead","order":1,"path":"sprites/spr_player_dead/spr_player_dead.yy",},
   ],
 }

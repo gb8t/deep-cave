@@ -45,8 +45,8 @@ if (fuel > 0) {
         if (fuel < 0) fuel = 0;
     }
 } else {
-	//salvar_jogo()
-    //room_restart(); // reinicia/fim de jogo  ao acabar o combustivel
+	salvar_jogo()
+	dead = 1
 }
 
 // Bloquear input na intro
@@ -118,7 +118,7 @@ if (meters >= item_spawn + 1) {
 		random_range(20, room_width - 20),
 		random_range(room_height * 1.5, room_height * 2),
 		"item",
-		choose(obj_bomb, obj_gem, obj_decor));
+		choose(obj_bomb, obj_gem, obj_decor, obj_fuel));
 }
 
 // Spawnar inimigos
