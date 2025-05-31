@@ -3,13 +3,6 @@ shake = 0;  // Tremor de tela
 
 mining = noone;
 
-// Variáveis de toque
-touch_active = false;
-touch_start_x = 0;
-touch_start_y = 0;
-touch_current_x = 0;
-touch_current_y = 0;
-
 item_spawn = 0;
 enemy_spawn = 20;
 
@@ -24,6 +17,7 @@ drill.depth--
 
 // motor
 dig_speed = 1.0 +( global.nivelMotor * 0.1);  // Velocidade de escavação
+speed_mt = 1 // Multiplicador de velocidade
 
 //Sorte
 sorte = 1 +(global.nivelSorte * 0.4)   // Sorte

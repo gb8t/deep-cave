@@ -22,7 +22,7 @@ global.preco_upgrade_sorte = function () {
     return floor(global.precoSorte * power(2, global.nivelSorte));
 };
 
-global.money = 100000 // Debug
+//global.money = 100000 // Debug
 show_debug_message("===== STATUS DE MELHORIAS =====");
 show_debug_message("Dinheiro: R$" + string(global.money));
 show_debug_message("Minérios: " + string(global.num_minerios));
