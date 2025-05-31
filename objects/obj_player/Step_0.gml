@@ -1,41 +1,9 @@
 // Variáveis
-var move_x = 0;
-var move_y = 0;
 var max_angle = 45;   // Ângulo máximo
 var turn_speed = 2.5; // Velocidade de rotação
-var intro_y = room_height / 3;  
-var x_speed = 0, y_speed = 0;
-
-// Joystick
-if (device_mouse_check_button(0, mb_left)) {
-    var tx = device_mouse_x_to_gui(0);
-    var ty = device_mouse_y_to_gui(0);
-
-    if (!touch_active) {
-        touch_start_x = display_get_gui_width() / 2;
-        touch_start_y = display_get_gui_height() * .8;
-        touch_active = true;
-    }
-
-    touch_current_x = tx;
-    touch_current_y = ty;
-
-    var dir_x = tx - touch_start_x;
-    var dir_y = ty - touch_start_y;
-
-    var length = point_distance(0, 0, dir_x, dir_y);
-    if (length > 4) {
-        move_x = clamp(dir_x / length, -1, 1);
-        move_y = clamp(dir_y / length, -1, 1);
-    } else {
-        move_x = 0;
-        move_y = 0;
-    }
-} else {
-    touch_active = false;
-    move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
-    move_y = keyboard_check(vk_down) - keyboard_check(vk_up);
-}
+var intro_y = room_height / 3;
+var x_speed = 0;
+var y_speed = 0;
 
 // Combustível
 if (fuel > 0) {
@@ -43,15 +11,17 @@ if (fuel > 0) {
         fuel -= fuel_rate;
         if (fuel < 0) fuel = 0;
     }
+	speed_mt = 1
+	drill.shake = 1
 } else {
-	salvar_jogo()
-	dead = 1
-}
-
-// Bloquear input na intro
-if (y < intro_y) {
-    move_x = 0;
-    move_y = 0;
+	speed_mt *= .95
+	drill.shake = 0
+	image_speed = 0
+	image_index = 0
+	drill.image_speed = 0
+	if (alarm[1] < 0) {
+		alarm[1] = 100
+	}
 }
 
 if (mining != noone) {
@@ -63,21 +33,23 @@ if (mining != noone) {
         mining = noone;
 		gems++
     }
-} else if (move_y >= 0) {
-    if (move_x != 0) {
-        drill.image_angle = clamp(
-			drill.image_angle + move_x * turn_speed,
-			-max_angle,
-			max_angle);
-    }
-
+} else {
     if (y < intro_y) {
-	    x_speed = lengthdir_x(dig_speed * 1.5, drill.image_angle - 90);
-	    y_speed = lengthdir_y(dig_speed * 1.5, drill.image_angle - 90);
-        y = min(y + y_speed, intro_y);
+		x_speed = lengthdir_x(dig_speed * 1.5, drill.image_angle - 90);
+		y_speed = lengthdir_y(dig_speed * 1.5, drill.image_angle - 90);
+		y += y_speed
     } else {
-	    x_speed = lengthdir_x(dig_speed, drill.image_angle - 90);
-	    y_speed = lengthdir_y(dig_speed, drill.image_angle - 90);
+		// Controle
+		if (fuel > 0 and device_mouse_check_button(0, mb_left)) {
+		    var tx = device_mouse_x_to_gui(0);
+		    var w = display_get_gui_width()
+			var t = clamp(tx / w, 0, 1)
+		    var a = lerp(-max_angle, max_angle, t);
+		    drill.image_angle = lerp(drill.image_angle, a, .2);
+		}
+		
+	    x_speed = lengthdir_x(dig_speed * speed_mt, drill.image_angle - 90);
+	    y_speed = lengthdir_y(dig_speed * speed_mt, drill.image_angle - 90);
 		
         meters += y_speed / 32;
 
@@ -89,7 +61,7 @@ if (mining != noone) {
         }
     }
 	
-    x = clamp(x + x_speed, 16, room_width - 16);
+    x = clamp(x + x_speed, 8, room_width - 8);
 
     // Criar buracos
     if (!place_meeting(x, y, obj_hole)) {
@@ -161,4 +133,5 @@ if (dead > 0) {
 	layer_vspeed("bg", 0)
 	instance_destroy(drill)
 	instance_destroy()
+	salvar_jogo()
 }
