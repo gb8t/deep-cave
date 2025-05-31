@@ -35,6 +35,7 @@
     {"name":"obj_player_dead","order":5,"path":"objects/obj_player_dead/obj_player_dead.yy",},
     {"name":"obj_score","order":3,"path":"objects/obj_score/obj_score.yy",},
     {"name":"obj_shine","order":3,"path":"objects/obj_shine/obj_shine.yy",},
+    {"name":"obj_title","order":6,"path":"objects/obj_title/obj_title.yy",},
     {"name":"spr_drill_1","order":3,"path":"sprites/spr_drill_1/spr_drill_1.yy",},
     {"name":"spr_explosion_hole","order":2,"path":"sprites/spr_explosion_hole/spr_explosion_hole.yy",},
     {"name":"spr_fuel","order":4,"path":"sprites/spr_fuel/spr_fuel.yy",},

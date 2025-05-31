@@ -8,7 +8,7 @@ if (global.player) {
 	image_xscale = sign(x - global.player.x)
 }
 
-if (device_mouse_check_button(0, mb_left)) {
+if (device_mouse_check_button_pressed(0, mb_left)) {
     var tx = device_mouse_x(0);
     var ty = device_mouse_y(0);
 	if point_distance(tx, ty, x, y) < 32 {

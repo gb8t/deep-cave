@@ -3,7 +3,6 @@ var move_x = 0;
 var move_y = 0;
 var max_angle = 45;   // Ângulo máximo
 var turn_speed = 2.5; // Velocidade de rotação
-var dig_speed_intro = 1.25;  // Velocidade de escavação
 var intro_y = room_height / 3;  
 var x_speed = 0, y_speed = 0;
 
@@ -53,7 +52,6 @@ if (fuel > 0) {
 if (y < intro_y) {
     move_x = 0;
     move_y = 0;
-    dig_speed_intro *= 1.5;
 }
 
 if (mining != noone) {
@@ -72,15 +70,15 @@ if (mining != noone) {
 			-max_angle,
 			max_angle);
     }
-    
-    x_speed = lengthdir_x(dig_speed, drill.image_angle - 90);
-    y_speed = lengthdir_y(dig_speed, drill.image_angle - 90);
-
-    x = clamp(x + x_speed, 16, room_width - 16);
 
     if (y < intro_y) {
+	    x_speed = lengthdir_x(dig_speed * 1.5, drill.image_angle - 90);
+	    y_speed = lengthdir_y(dig_speed * 1.5, drill.image_angle - 90);
         y = min(y + y_speed, intro_y);
     } else {
+	    x_speed = lengthdir_x(dig_speed, drill.image_angle - 90);
+	    y_speed = lengthdir_y(dig_speed, drill.image_angle - 90);
+		
         meters += y_speed / 32;
 
         // Mover itens para simular descida
@@ -90,6 +88,8 @@ if (mining != noone) {
 			}
         }
     }
+	
+    x = clamp(x + x_speed, 16, room_width - 16);
 
     // Criar buracos
     if (!place_meeting(x, y, obj_hole)) {

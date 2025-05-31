@@ -1,6 +1,6 @@
 event_inherited()
 
-image_alpha -= .05
+image_alpha -= .04
 if (image_alpha <= 0) {
 	instance_destroy()
 }
