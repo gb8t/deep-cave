@@ -43,6 +43,7 @@
     {"id":{"name":"obj_bomb","path":"objects/obj_bomb/obj_bomb.yy",},},
     {"id":{"name":"obj_btn","path":"objects/obj_btn/obj_btn.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
+    {"id":{"name":"obj_credits","path":"objects/obj_credits/obj_credits.yy",},},
     {"id":{"name":"obj_decor","path":"objects/obj_decor/obj_decor.yy",},},
     {"id":{"name":"obj_drill","path":"objects/obj_drill/obj_drill.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
@@ -66,6 +67,7 @@
     {"id":{"name":"obj_scroll","path":"objects/obj_scroll/obj_scroll.yy",},},
     {"id":{"name":"obj_shine","path":"objects/obj_shine/obj_shine.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
+    {"id":{"name":"credits","path":"rooms/credits/credits.yy",},},
     {"id":{"name":"inicial","path":"rooms/inicial/inicial.yy",},},
     {"id":{"name":"loja","path":"rooms/loja/loja.yy",},},
     {"id":{"name":"room1","path":"rooms/room1/room1.yy",},},
@@ -107,6 +109,7 @@
     {"roomId":{"name":"inicial","path":"rooms/inicial/inicial.yy",},},
     {"roomId":{"name":"room1","path":"rooms/room1/room1.yy",},},
     {"roomId":{"name":"loja","path":"rooms/loja/loja.yy",},},
+    {"roomId":{"name":"credits","path":"rooms/credits/credits.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

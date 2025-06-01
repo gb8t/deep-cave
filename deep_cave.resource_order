@@ -22,6 +22,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_bomb","order":1,"path":"objects/obj_bomb/obj_bomb.yy",},
     {"name":"obj_btn","order":2,"path":"objects/obj_btn/obj_btn.yy",},
+    {"name":"obj_credits","order":8,"path":"objects/obj_credits/obj_credits.yy",},
     {"name":"obj_decor","order":2,"path":"objects/obj_decor/obj_decor.yy",},
     {"name":"obj_drill","order":1,"path":"objects/obj_drill/obj_drill.yy",},
     {"name":"obj_explosion_hole","order":7,"path":"objects/obj_explosion_hole/obj_explosion_hole.yy",},
@@ -39,6 +40,7 @@
     {"name":"obj_scroll","order":7,"path":"objects/obj_scroll/obj_scroll.yy",},
     {"name":"obj_shine","order":3,"path":"objects/obj_shine/obj_shine.yy",},
     {"name":"obj_title","order":6,"path":"objects/obj_title/obj_title.yy",},
+    {"name":"credits","order":1,"path":"rooms/credits/credits.yy",},
     {"name":"spr_button","order":6,"path":"sprites/spr_button/spr_button.yy",},
     {"name":"spr_drill_1","order":3,"path":"sprites/spr_drill_1/spr_drill_1.yy",},
     {"name":"spr_explosion_hole","order":2,"path":"sprites/spr_explosion_hole/spr_explosion_hole.yy",},
