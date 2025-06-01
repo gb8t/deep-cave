@@ -42,10 +42,7 @@
     {"name":"spr_explosion_hole","order":2,"path":"sprites/spr_explosion_hole/spr_explosion_hole.yy",},
     {"name":"spr_fuel","order":4,"path":"sprites/spr_fuel/spr_fuel.yy",},
     {"name":"spr_grave","order":5,"path":"sprites/spr_grave/spr_grave.yy",},
-<<<<<<< HEAD
     {"name":"spr_pause","order":6,"path":"sprites/spr_pause/spr_pause.yy",},
-=======
->>>>>>> ca9f94a17a6201862b036338d029e968803a3607
     {"name":"spr_player_dead","order":1,"path":"sprites/spr_player_dead/spr_player_dead.yy",},
   ],
 }

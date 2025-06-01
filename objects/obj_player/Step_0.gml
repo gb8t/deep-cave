@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 // Pause
 if (global.pause) {
     image_speed = 0
 	layer_vspeed("bg", 0);
     exit;
 }
-=======
-// Variáveis
-var max_angle = 45;   // Ângulo máximo
-var intro_y = room_height / 3;
-var x_speed = 0;
-var y_speed = 0;
->>>>>>> ca9f94a17a6201862b036338d029e968803a3607
 
 // Botão de pause
 var scale = 0.07;

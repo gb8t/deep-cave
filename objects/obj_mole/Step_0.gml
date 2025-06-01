@@ -1,6 +1,5 @@
 event_inherited()
 
-<<<<<<< HEAD
 if (global.pause) {
     image_speed = 0;
     hspeed = 0;
@@ -10,8 +9,6 @@ if (global.pause) {
     image_speed = 1;
 }
 
-=======
->>>>>>> ca9f94a17a6201862b036338d029e968803a3607
 if (global.player) {
 	var dir = point_direction(x, y, global.player.x, global.player.y)
 	hspeed = lengthdir_x(.7, dir)
