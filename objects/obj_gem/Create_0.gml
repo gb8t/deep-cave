@@ -1,4 +1,4 @@
-hp = 30;
+event_inherited()
 
 image_speed = .2
 

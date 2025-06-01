@@ -1,14 +1,11 @@
 meters = 0; // Profundidade
 shake = 0;  // Tremor de tela
 
-mining = noone;
+// Botão de pause
+btn_pause_x = room_width - 90;  
+btn_pause_y = 30;
 
-// Variáveis de toque
-touch_active = false;
-touch_start_x = 0;
-touch_start_y = 0;
-touch_current_x = 0;
-touch_current_y = 0;
+mining = noone;
 
 item_spawn = 0;
 enemy_spawn = 20;
@@ -20,14 +17,22 @@ fuel_rate = 0.2 - (global.nivelMotorEficiencia * 0.02);    // Gasto de combustiv
 
 // Broca
 drill = instance_create_layer(x, y, layer, obj_drill);
-drill.depth = -1;
+drill.depth--
 
 // motor
 dig_speed = 1.0 +( global.nivelMotor * 0.1);  // Velocidade de escavação
+speed_mt = 1 // Multiplicador de velocidade
 
 //Sorte
 sorte = 1 +(global.nivelSorte * 0.4)   // Sorte
 
-// Layout
 gems = 0
 keys = 0
+
+dead = 0
+
+global.player = id
+
+image_speed = .5
+
+reach_hscore = false

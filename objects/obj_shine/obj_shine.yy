@@ -10,8 +10,8 @@
   "name":"obj_shine",
   "overriddenProperties":[],
   "parent":{
-    "name":"items",
-    "path":"folders/Objects/items.yy",
+    "name":"effect",
+    "path":"folders/Objects/items/effect.yy",
   },
   "parentObjectId":{
     "name":"obj_item",

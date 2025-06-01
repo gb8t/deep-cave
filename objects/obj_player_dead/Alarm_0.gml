@@ -1,0 +1,1 @@
+instance_activate_layer("menu")

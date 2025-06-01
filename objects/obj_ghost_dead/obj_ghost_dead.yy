@@ -9,8 +9,8 @@
   "name":"obj_ghost_dead",
   "overriddenProperties":[],
   "parent":{
-    "name":"items",
-    "path":"folders/Objects/items.yy",
+    "name":"effect",
+    "path":"folders/Objects/items/effect.yy",
   },
   "parentObjectId":null,
   "persistent":false,

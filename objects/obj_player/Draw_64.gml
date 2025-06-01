@@ -1,3 +1,5 @@
+if(global.pause) exit;
+
 display_set_gui_size(room_width, room_height);
 
 draw_set_font(global.font)
@@ -22,7 +24,6 @@ var bar_x = room_width - 3 - bar_w;
 var bar_y = 2;
 fuel = clamp(fuel, 0, fuel_max);
 var fuel_percent = fuel / fuel_max;
-
 draw_set_color(c_black);
 draw_set_alpha(.5);
 draw_rectangle(
@@ -34,12 +35,21 @@ draw_set_color(c_lime);
 draw_set_alpha(1);
 draw_rectangle(
 	bar_x,
-	bar_y + bar_h * (1 - fuel_percent),
+	bar_y + bar_h * (1 - fuel_percent) + 1,
 	bar_x + bar_w,
 	bar_y + bar_h,
 	false);
+	
+// Botão de pause
+if (global.pause) {
+    
+} else {
+    draw_sprite_ext(spr_pause, 0, btn_pause_x, btn_pause_y, 0.07, 0.07, 0, c_white, 1);
+
+}
 
 // Joystick
+/*
 draw_set_alpha(.5);
 if (touch_active) {
     var base_x = touch_start_x;
@@ -59,6 +69,7 @@ if (touch_active) {
     draw_sprite(spr_joystick_2, 0, cur_x, cur_y)
 }
 draw_set_alpha(1);
+*/
 
 /*
 // Teste das variaveis do save
