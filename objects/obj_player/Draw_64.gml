@@ -1,4 +1,4 @@
-if(global.pause) exit;
+if (global.pause) exit;
 
 display_set_gui_size(room_width, room_height);
 
@@ -11,43 +11,30 @@ draw_set_valign(fa_top)
 draw_text(2, 2, string_format(meters, 1, 2) + "M");
 
 // Gemas
-var num = [gems, keys]
-for (var i = 0; i < 2; i++) {
-	draw_sprite(spr_icon, i, 2, 12 + i * 8)
-	draw_text(12, 12+ i * 8, num[i])
-}
+draw_sprite(spr_icon, 0, 2, 12)
+draw_text(12, 12, gems)
 
 // Combustível
 var bar_w = 8;
-var bar_h = 16;
-var bar_x = room_width - 3 - bar_w;
-var bar_y = 2;
-fuel = clamp(fuel, 0, fuel_max);
+var bar_h = 24;
+var bar_x = 2;
+var bar_y = 24;
 var fuel_percent = fuel / fuel_max;
-draw_set_color(c_black);
-draw_set_alpha(.5);
-draw_rectangle(
-	bar_x, bar_y,
-	bar_x + bar_w,
-	bar_y + bar_h,
-	false);
 draw_set_color(c_lime);
-draw_set_alpha(1);
 draw_rectangle(
-	bar_x,
-	bar_y + bar_h * (1 - fuel_percent) + 1,
-	bar_x + bar_w,
-	bar_y + bar_h,
+	bar_x + 1,
+	bar_y + 1 + bar_h * (1 - fuel_percent),
+	bar_x + bar_w - 2,
+	bar_y + bar_h - 2,
 	false);
-	
-// Botão de pause
-if (global.pause) {
+draw_sprite_ext(
+	spr_tank, 0,
+	bar_x,
+	bar_y,
+	bar_w / 8,
+	bar_h / 8,
+	0, -1, 1)
     
-} else {
-    draw_sprite_ext(spr_pause, 0, btn_pause_x, btn_pause_y, 0.07, 0.07, 0, c_white, 1);
-
-}
-
 // Joystick
 /*
 draw_set_alpha(.5);

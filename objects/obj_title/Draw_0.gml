@@ -12,10 +12,10 @@ var x0 = x
 for (var i = 1; i <= string_length(str); i++) {
 	var c =  string_char_at(str, i)
 	var t = current_time / 200 + i
-	draw_text(x, y + cos(t) * 2, c)
+	draw_text(x, y + cos(t), c)
 	x += 8
 	if (c == "\n") {
-		y += 8
+		y += 10
 		x = x0
 	}
 }

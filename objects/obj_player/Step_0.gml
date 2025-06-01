@@ -5,42 +5,6 @@ if (global.pause) {
     exit;
 }
 
-// Botão de pause
-var scale = 0.07;
-var spr = spr_pause;
-
-var sw = sprite_get_width(spr) * scale;
-var sh = sprite_get_height(spr) * scale;
-
-var ox = sprite_get_xoffset(spr) * scale;
-var oy = sprite_get_yoffset(spr) * scale;
-
-var x1 = btn_pause_x - ox;
-var y1 = btn_pause_y - oy;
-var x2 = x1 + sw;
-var y2 = y1 + sh;
-
-
-var mx = device_mouse_x_to_gui(0);
-var my = device_mouse_y_to_gui(0);
-
-if (device_mouse_check_button_pressed(0, mb_left)) {
-    var mx = device_mouse_x_to_gui(0);
-    var my = device_mouse_y_to_gui(0);
-
-    if (mx >= x1 && mx <= x2 && my >= y1 && my <= y2) {
-        global.pause = !global.pause;
-
-        if (global.pause) {
-            // Ativar elementos do menu de pausa
-            instance_activate_layer("menu");
-        } else {
-            // Ocultar elementos do menu de pausa
-            instance_deactivate_layer("menu");
-        }
-    }
-}
-
 // Variáveis
 var max_angle = 45;   // Ângulo máximo
 var intro_y = room_height / 3;
@@ -74,9 +38,14 @@ if (mining != noone) {
 		switch (mining.object_index) {
 		case obj_gem:
 			gems++
+			tocar_som("minerio")
 			break
 		case obj_grave:
 			gems += 10
+			tocar_som("minerio")
+			break
+		case obj_fuel:
+			fuel = min(fuel + 50, fuel_max)
 			break
 		}
         instance_destroy(mining);
@@ -186,10 +155,16 @@ if (y >= intro_y) {
 }
 
 if (dead > 0) {
+	audio_stop_sound(global.musica_atual);
+    tocar_som("morte")
+	audio_stop_sound(global.musica_atual);
+	global.musica_atual = -1;
+	global.musica_recurso = -1;
+
 	with (instance_create_layer(x, y, layer, obj_player_dead)) {
 		image_index = other.dead - 1
 	}
-	with (instance_create_layer(x, y, layer, obj_fall)) {
+	with (instance_create_layer(x, y, "effect", obj_fall)) {
 		sprite_index = spr_drill_1
 	}
 	global.money += gems * 100
@@ -199,6 +174,7 @@ if (dead > 0) {
 		global.high_score = meters
 	}
 	layer_vspeed("bg", 0)
+	instance_deactivate_layer("menu2")
 	instance_destroy(drill)
 	instance_destroy()
 	salvar_jogo()

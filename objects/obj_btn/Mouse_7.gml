@@ -1,9 +1,9 @@
-// controla se vai direcionar para um novo jogo ou apenas resumir o atual
-if (global.pause) {
-    global.pause = false;
-	image_index = 1
-	instance_deactivate_layer("menu");
-
-} else {
-    press();
+with (obj_scroll) {
+	if (abs(drag_speed) > limit) {
+		exit
+	}
 }
+tocar_som("click")
+global.reiniciar_musica = true;
+press();
+image_index = 0

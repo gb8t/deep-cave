@@ -1,10 +1,6 @@
 meters = 0; // Profundidade
 shake = 0;  // Tremor de tela
 
-// Botão de pause
-btn_pause_x = room_width - 90;  
-btn_pause_y = 30;
-
 mining = noone;
 
 item_spawn = 0;
@@ -36,3 +32,5 @@ global.player = id
 image_speed = .5
 
 reach_hscore = false
+
+global.pause = false
