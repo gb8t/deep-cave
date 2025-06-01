@@ -10,8 +10,8 @@
     "path":"folders/Objects/items.yy",
   },
   "parentObjectId":{
-    "name":"obj_item",
-    "path":"objects/obj_item/obj_item.yy",
+    "name":"obj_mineable",
+    "path":"objects/obj_mineable/obj_mineable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

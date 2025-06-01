@@ -42,6 +42,9 @@ if (mining != noone) {
 		case obj_grave:
 			gems += 10
 			break
+		case obj_fuel:
+			fuel = min(fuel + 50, fuel_max)
+			break
 		}
         instance_destroy(mining);
         mining = noone;

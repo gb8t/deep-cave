@@ -1,23 +1,15 @@
 {
   "FolderOrderSettings":[
-    {"name":"Extensions","order":1,"path":"folders/Extensions.yy",},
-    {"name":"Fonts","order":2,"path":"folders/Fonts.yy",},
-    {"name":"Notes","order":3,"path":"folders/Notes.yy",},
     {"name":"Objects","order":13,"path":"folders/Objects.yy",},
     {"name":"items","order":1,"path":"folders/Objects/items.yy",},
     {"name":"effect","order":6,"path":"folders/Objects/items/effect.yy",},
     {"name":"enemy","order":5,"path":"folders/Objects/items/enemy.yy",},
     {"name":"menu","order":4,"path":"folders/Objects/menu.yy",},
     {"name":"player","order":3,"path":"folders/Objects/player.yy",},
-    {"name":"Particle Systems","order":4,"path":"folders/Particle Systems.yy",},
     {"name":"Rooms","order":5,"path":"folders/Rooms.yy",},
     {"name":"Scripts","order":6,"path":"folders/Scripts.yy",},
-    {"name":"Sequences","order":7,"path":"folders/Sequences.yy",},
-    {"name":"Shaders","order":8,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":9,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":10,"path":"folders/Sprites.yy",},
-    {"name":"Tile Sets","order":11,"path":"folders/Tile Sets.yy",},
-    {"name":"Timelines","order":12,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"obj_bomb","order":1,"path":"objects/obj_bomb/obj_bomb.yy",},
@@ -48,5 +40,6 @@
     {"name":"spr_grave","order":5,"path":"sprites/spr_grave/spr_grave.yy",},
     {"name":"spr_pause","order":6,"path":"sprites/spr_pause/spr_pause.yy",},
     {"name":"spr_player_dead","order":1,"path":"sprites/spr_player_dead/spr_player_dead.yy",},
+    {"name":"spr_tank","order":7,"path":"sprites/spr_tank/spr_tank.yy",},
   ],
 }

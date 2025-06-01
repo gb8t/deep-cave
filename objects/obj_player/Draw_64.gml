@@ -20,21 +20,20 @@ var bar_h = 24 - 1;
 var bar_x = 2;
 var bar_y = 24;
 var fuel_percent = fuel / fuel_max;
-draw_set_color(c_black);
-draw_set_alpha(.5);
-draw_rectangle(
-	bar_x, bar_y,
-	bar_x + bar_w,
-	bar_y + bar_h,
-	false);
 draw_set_color(c_lime);
-draw_set_alpha(1);
 draw_rectangle(
-	bar_x,
-	bar_y + bar_h * (1 - fuel_percent),
-	bar_x + bar_w,
-	bar_y + bar_h,
+	bar_x + 1,
+	bar_y + 1 + bar_h * (1 - fuel_percent),
+	bar_x + bar_w - 1,
+	bar_y + bar_h - 1,
 	false);
+draw_sprite_ext(
+	spr_tank, 0,
+	bar_x,
+	bar_y,
+	ceil(bar_w / 8),
+	ceil(bar_h / 8),
+	0, -1, 1)
     
 // Joystick
 /*
