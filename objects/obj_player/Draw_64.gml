@@ -1,4 +1,4 @@
-if(global.pause) exit;
+if (global.pause) exit;
 
 display_set_gui_size(room_width, room_height);
 
@@ -16,7 +16,7 @@ draw_text(12, 12, gems)
 
 // Combustível
 var bar_w = 8 - 1;
-var bar_h = 32 - 1;
+var bar_h = 24 - 1;
 var bar_x = 2;
 var bar_y = 24;
 var fuel_percent = fuel / fuel_max;

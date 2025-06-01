@@ -63,6 +63,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_player_dead","path":"objects/obj_player_dead/obj_player_dead.yy",},},
     {"id":{"name":"obj_score","path":"objects/obj_score/obj_score.yy",},},
+    {"id":{"name":"obj_scroll","path":"objects/obj_scroll/obj_scroll.yy",},},
     {"id":{"name":"obj_shine","path":"objects/obj_shine/obj_shine.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
     {"id":{"name":"inicial","path":"rooms/inicial/inicial.yy",},},
