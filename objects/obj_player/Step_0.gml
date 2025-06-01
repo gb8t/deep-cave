@@ -1,6 +1,5 @@
 // Variáveis
 var max_angle = 45;   // Ângulo máximo
-var turn_speed = 2.5; // Velocidade de rotação
 var intro_y = room_height / 3;
 var x_speed = 0;
 var y_speed = 0;
@@ -47,12 +46,17 @@ if (mining != noone) {
 		y += y_speed
     } else {
 		// Controle
-		if (fuel > 0 and device_mouse_check_button(0, mb_left)) {
-		    var tx = device_mouse_x_to_gui(0);
-		    var w = display_get_gui_width()
-			var t = clamp(tx / w, 0, 1)
-		    var a = lerp(-max_angle, max_angle, t);
-		    drill.image_angle = lerp(drill.image_angle, a, .2);
+		if (fuel > 0) {
+			if (device_mouse_check_button(0, mb_left)) {
+			    var tx = device_mouse_x_to_gui(0);
+			    var w = display_get_gui_width()
+				var t = clamp(tx / w, 0, 1)
+			    var a = lerp(-max_angle, max_angle, t);
+			    drill.image_angle = lerp(drill.image_angle, a, .2);
+			} else {
+				var move = keyboard_check(vk_right) - keyboard_check(vk_left)
+				drill.image_angle = clamp(drill.image_angle + move * 2.5, -max_angle, max_angle)
+			}
 		}
 		
 	    x_speed = lengthdir_x(dig_speed * speed_mt, drill.image_angle - 90);
