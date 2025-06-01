@@ -5,8 +5,11 @@ shake = 0;  // Tremor de tela
 btn_pause_x = room_width - 90;  
 btn_pause_y = 30;
 
+<<<<<<< HEAD
 mining = noone;
 
+=======
+>>>>>>> ca9f94a17a6201862b036338d029e968803a3607
 item_spawn = 0;
 enemy_spawn = 20;
 

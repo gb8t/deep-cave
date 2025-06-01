@@ -9,7 +9,11 @@ function salvar_jogo() {
 	buffer_write(buffer, buffer_u32, global.nivelMotor);
 	buffer_write(buffer, buffer_u32, global.nivelMotorEficiencia);
 	buffer_write(buffer, buffer_u32, global.nivelSorte);
+<<<<<<< HEAD
 	buffer_write(buffer, buffer_u32, global.high_score);
+=======
+	buffer_write(buffer, buffer_u32, global.high_score);
+>>>>>>> ca9f94a17a6201862b036338d029e968803a3607
 
     buffer_save(buffer, global.save_file);
     buffer_delete(buffer);

@@ -49,7 +49,11 @@ if (global.pause) {
 }
 
 // Joystick
+<<<<<<< HEAD
 /*
+=======
+/*
+>>>>>>> ca9f94a17a6201862b036338d029e968803a3607
 draw_set_alpha(.5);
 if (touch_active) {
     var base_x = touch_start_x;
@@ -69,7 +73,11 @@ if (touch_active) {
     draw_sprite(spr_joystick_2, 0, cur_x, cur_y)
 }
 draw_set_alpha(1);
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> ca9f94a17a6201862b036338d029e968803a3607
 
 /*
 // Teste das variaveis do save

@@ -10,7 +10,11 @@ function carregar_jogo() {
         if (buffer_tell(buffer) + 4 <= tamanho) global.nivelMotor = buffer_read(buffer, buffer_u32); else global.nivelMotor = 0;
         if (buffer_tell(buffer) + 4 <= tamanho) global.nivelMotorEficiencia = buffer_read(buffer, buffer_u32); else global.nivelMotorEfiencia = 0;
         if (buffer_tell(buffer) + 4 <= tamanho) global.nivelSorte = buffer_read(buffer, buffer_u32); else global.nivelSorte = 0;
+<<<<<<< HEAD
         if (buffer_tell(buffer) + 4 <= tamanho) global.high_score = buffer_read(buffer, buffer_u32); else global.high_score = 0;
+=======
+        if (buffer_tell(buffer) + 4 <= tamanho) global.high_score = buffer_read(buffer, buffer_u32); else global.high_score = 0;
+>>>>>>> ca9f94a17a6201862b036338d029e968803a3607
 
         buffer_delete(buffer);
         return true;
