@@ -29,9 +29,16 @@ if (mining != noone) {
         mining.hp--;
         shake = 2;
     } else {
+		switch (mining.object_index) {
+		case obj_gem:
+			gems++
+			break
+		case obj_grave:
+			gems += 10
+			break
+		}
         instance_destroy(mining);
         mining = noone;
-		gems++
     }
 } else {
     if (y < intro_y) {
@@ -78,7 +85,7 @@ if (mining != noone) {
 	with (drill) {
 		x = other.x
 		y = other.y
-		other.mining = instance_place(x, y, obj_gem);
+		other.mining = instance_place(x, y, obj_mineable);
 	}
 }
 
@@ -91,6 +98,16 @@ if (meters >= item_spawn + 1) {
 		random_range(room_height * 1.5, room_height * 2),
 		"item",
 		choose(obj_bomb, obj_gem, obj_decor, obj_fuel));
+}
+
+// Spawnar túmulo
+if (meters >= global.high_score and !reach_hscore) {
+    reach_hscore = true
+	instance_create_layer(
+		random_range(20, room_width - 20),
+		random_range(room_height * 1.5, room_height * 2),
+		"item",
+		obj_grave);
 }
 
 // Spawnar inimigos
@@ -130,6 +147,10 @@ if (dead > 0) {
 	}
 	global.money += gems * 100
 	global.player = noone
+	global.meters = meters
+	if (meters > global.high_score) {
+		global.high_score = meters
+	}
 	layer_vspeed("bg", 0)
 	instance_destroy(drill)
 	instance_destroy()
