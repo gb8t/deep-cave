@@ -15,8 +15,8 @@ draw_sprite(spr_icon, 0, 2, 12)
 draw_text(12, 12, gems)
 
 // Combustível
-var bar_w = 8 - 1;
-var bar_h = 24 - 1;
+var bar_w = 8;
+var bar_h = 24;
 var bar_x = 2;
 var bar_y = 24;
 var fuel_percent = fuel / fuel_max;
@@ -24,15 +24,15 @@ draw_set_color(c_lime);
 draw_rectangle(
 	bar_x + 1,
 	bar_y + 1 + bar_h * (1 - fuel_percent),
-	bar_x + bar_w - 1,
-	bar_y + bar_h - 1,
+	bar_x + bar_w - 2,
+	bar_y + bar_h - 2,
 	false);
 draw_sprite_ext(
 	spr_tank, 0,
 	bar_x,
 	bar_y,
-	ceil(bar_w / 8),
-	ceil(bar_h / 8),
+	bar_w / 8,
+	bar_h / 8,
 	0, -1, 1)
     
 // Joystick
