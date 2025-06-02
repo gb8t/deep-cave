@@ -11,8 +11,7 @@ draw_set_valign(fa_top)
 draw_text(2, 2, string_format(meters, 1, 2) + "M");
 
 // Gemas
-draw_sprite(spr_icon, 0, 2, 12)
-draw_text(12, 12, gems)
+draw_text(2, 12, "]" + string(gems))
 
 // Combustível
 var bar_w = 8;

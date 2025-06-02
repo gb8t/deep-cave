@@ -101,7 +101,6 @@
     {"id":{"name":"spr_grave","path":"sprites/spr_grave/spr_grave.yy",},},
     {"id":{"name":"spr_hit","path":"sprites/spr_hit/spr_hit.yy",},},
     {"id":{"name":"spr_hole","path":"sprites/spr_hole/spr_hole.yy",},},
-    {"id":{"name":"spr_icon","path":"sprites/spr_icon/spr_icon.yy",},},
     {"id":{"name":"spr_joystick_1","path":"sprites/spr_joystick_1/spr_joystick_1.yy",},},
     {"id":{"name":"spr_joystick_2","path":"sprites/spr_joystick_2/spr_joystick_2.yy",},},
     {"id":{"name":"spr_menu","path":"sprites/spr_menu/spr_menu.yy",},},
