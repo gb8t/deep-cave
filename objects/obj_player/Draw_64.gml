@@ -20,10 +20,15 @@ var bar_h = 24;
 var bar_x = 2;
 var bar_y = 24;
 var fuel_percent = fuel / fuel_max;
-draw_set_color(c_lime);
+if (fuel_blink > 0) fuel_blink--
+if (fuel_blink > 0 and fuel_blink / 3 % 2 == 0) {
+	draw_set_color(c_white);
+} else {
+	draw_set_color(c_lime);
+}
 draw_rectangle(
 	bar_x + 1,
-	bar_y + 1 + bar_h * (1 - fuel_percent),
+	bar_y + 1 + (bar_h - 2) * (1 - fuel_percent),
 	bar_x + bar_w - 2,
 	bar_y + bar_h - 2,
 	false);

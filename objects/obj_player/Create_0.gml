@@ -10,6 +10,7 @@ enemy_spawn = 20;
 fuel_max = 200 + (global.nivelTanque * 50);    // Capacidade total
 fuel = fuel_max;     // Combustivel atual
 fuel_rate = 0.2 - (global.nivelMotorEficiencia * 0.02);    // Gasto de combustivel
+fuel_blink = 0
 
 // Broca
 drill = instance_create_layer(x, y, layer, obj_drill);

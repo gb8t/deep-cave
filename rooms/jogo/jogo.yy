@@ -1,16 +1,16 @@
 {
   "$GMRoom":"v1",
-  "%Name":"room1",
-  "creationCodeFile":"rooms/room1/RoomCreationCode.gml",
+  "%Name":"jogo",
+  "creationCodeFile":"rooms/jogo/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_1B6499B8","path":"rooms/room1/room1.yy",},
-    {"name":"inst_1C3AE6DF","path":"rooms/room1/room1.yy",},
-    {"name":"inst_7A9F1854","path":"rooms/room1/room1.yy",},
-    {"name":"inst_233DB9B8","path":"rooms/room1/room1.yy",},
-    {"name":"inst_125A5954","path":"rooms/room1/room1.yy",},
+    {"name":"inst_1B6499B8","path":"rooms/jogo/jogo.yy",},
+    {"name":"inst_1C3AE6DF","path":"rooms/jogo/jogo.yy",},
+    {"name":"inst_7A9F1854","path":"rooms/jogo/jogo.yy",},
+    {"name":"inst_233DB9B8","path":"rooms/jogo/jogo.yy",},
+    {"name":"inst_125A5954","path":"rooms/jogo/jogo.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -32,7 +32,7 @@
     {"$GMRInstanceLayer":"","%Name":"decor","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"decor","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"bg","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":800,"effectEnabled":true,"effectType":"none","gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"bg","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
-  "name":"room1",
+  "name":"jogo",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",

@@ -44,6 +44,7 @@
     {"name":"som_minerio","order":4,"path":"sounds/som_minerio/som_minerio.yy",},
     {"name":"som_monstro","order":6,"path":"sounds/som_monstro/som_monstro.yy",},
     {"name":"som_morte","order":5,"path":"sounds/som_morte/som_morte.yy",},
+    {"name":"som_powerup","order":8,"path":"sounds/som_powerup/som_powerup.yy",},
     {"name":"spr_button","order":6,"path":"sprites/spr_button/spr_button.yy",},
     {"name":"spr_button_off","order":8,"path":"sprites/spr_button_off/spr_button_off.yy",},
     {"name":"spr_drill_1","order":3,"path":"sprites/spr_drill_1/spr_drill_1.yy",},

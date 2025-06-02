@@ -38,16 +38,12 @@ if (mining != noone) {
 		switch (mining.object_index) {
 		case obj_gem:
 			gems += 1 + mining.gem_id
-			tocar_som(som_minerio)
 			break
 		case obj_grave:
 			gems += 10
-			tocar_som(som_minerio)
-			break
-		case obj_fuel:
-			fuel = min(fuel + 50, fuel_max)
 			break
 		}
+		tocar_som(som_minerio)
         instance_destroy(mining);
         mining = noone;
     }
