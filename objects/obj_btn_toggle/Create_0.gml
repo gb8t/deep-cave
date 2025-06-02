@@ -2,4 +2,6 @@ event_inherited()
 
 text = ""
 toggle = true
-press = function() {}
+press = function() {
+	return 0
+}

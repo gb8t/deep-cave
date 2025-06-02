@@ -39,6 +39,7 @@
     {"name":"tocar_som","order":1,"path":"scripts/tocar_som/tocar_som.yy",},
     {"name":"som_bomba","order":3,"path":"sounds/som_bomba/som_bomba.yy",},
     {"name":"som_click","order":2,"path":"sounds/som_click/som_click.yy",},
+    {"name":"som_erro","order":7,"path":"sounds/som_erro/som_erro.yy",},
     {"name":"som_menu","order":1,"path":"sounds/som_menu/som_menu.yy",},
     {"name":"som_minerio","order":4,"path":"sounds/som_minerio/som_minerio.yy",},
     {"name":"som_monstro","order":6,"path":"sounds/som_monstro/som_monstro.yy",},

@@ -6,3 +6,6 @@ press = function() {
 		text = "SORTE: " + string(global.nivelSorte)
 	}
 }
+is_off = function() {
+	return global.money < global.preco_upgrade_sorte()
+}

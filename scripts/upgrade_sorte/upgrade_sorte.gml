@@ -11,5 +11,6 @@ var precoSorte = global.preco_upgrade_sorte();
 		}
     } else {
         show_debug_message("Dinheiro insuficiente!");
+		return 1
     }
 }

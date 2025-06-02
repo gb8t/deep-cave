@@ -11,5 +11,6 @@ var precoMotor = global.preco_upgrade_motor();
 		}
     } else {
         show_debug_message("Dinheiro insuficiente!");
+		return 1
     }
 }

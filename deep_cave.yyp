@@ -76,6 +76,7 @@
     {"id":{"name":"upgrade_tanque","path":"scripts/upgrade_tanque/upgrade_tanque.yy",},},
     {"id":{"name":"som_bomba","path":"sounds/som_bomba/som_bomba.yy",},},
     {"id":{"name":"som_click","path":"sounds/som_click/som_click.yy",},},
+    {"id":{"name":"som_erro","path":"sounds/som_erro/som_erro.yy",},},
     {"id":{"name":"som_gameplay","path":"sounds/som_gameplay/som_gameplay.yy",},},
     {"id":{"name":"som_menu","path":"sounds/som_menu/som_menu.yy",},},
     {"id":{"name":"som_minerio","path":"sounds/som_minerio/som_minerio.yy",},},

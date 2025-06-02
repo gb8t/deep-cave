@@ -6,3 +6,6 @@ press = function() {
 		text = "EFIC.: " + string(global.nivelMotorEficiencia)
 	}
 }
+is_off = function() {
+	return global.money < global.preco_upgrade_motor_eficiencia()
+}

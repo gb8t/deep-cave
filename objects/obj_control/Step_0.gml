@@ -3,3 +3,5 @@ if (global.flash_alpha > 0) {
 } else {
 	global.flash_alpha = 0
 }
+
+global.money = min(global.money, 99999)

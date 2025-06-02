@@ -9,5 +9,5 @@ if (image_index != 1) {
 }
 
 toggle = !toggle
-press();
-tocar_som(som_click)
+var err = press();
+tocar_som(err ? som_erro : som_click)

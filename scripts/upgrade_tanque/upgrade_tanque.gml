@@ -14,6 +14,7 @@ var precoTanque = global.preco_upgrade_tanque();
 		}
     } else {
         show_debug_message("Dinheiro insuficiente!");
+		return 1
     }
 
 }

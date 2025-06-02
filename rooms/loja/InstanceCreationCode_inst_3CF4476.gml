@@ -6,3 +6,6 @@ press = function() {
 		text = "MOTOR: " + string(global.nivelMotor)
 	}
 }
+is_off = function() {
+	return global.money < global.preco_upgrade_motor()
+}
