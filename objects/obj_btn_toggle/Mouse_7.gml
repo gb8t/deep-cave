@@ -8,6 +8,6 @@ if (image_index != 1) {
 	exit
 }
 
-tocar_som(som_click)
 toggle = !toggle
 press();
+tocar_som(som_click)

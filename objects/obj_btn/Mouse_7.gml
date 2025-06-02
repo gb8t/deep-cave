@@ -8,7 +8,7 @@ if (image_index != 1) {
 	exit
 }
 
-tocar_som(som_click)
 global.reiniciar_musica = true;
 image_index = 0
 press();
+tocar_som(som_click)

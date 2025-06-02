@@ -7,7 +7,7 @@ item_spawn = 0;
 enemy_spawn = 20;
 
 // Combustível
-fuel_max = 100 + (global.nivelTanque * 30);    // Capacidade total
+fuel_max = 200 + (global.nivelTanque * 50);    // Capacidade total
 fuel = fuel_max;     // Combustivel atual
 fuel_rate = 0.2 - (global.nivelMotorEficiencia * 0.02);    // Gasto de combustivel
 

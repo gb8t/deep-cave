@@ -117,7 +117,7 @@ if (meters >= item_spawn + 1) {
 }
 
 // Spawnar túmulo
-if (meters >= global.high_score and !reach_hscore) {
+if (meters >= global.high_score and global.high_score > 0 and !reach_hscore) {
     reach_hscore = true
 	instance_create_layer(
 		random_range(20, room_width - 20),
