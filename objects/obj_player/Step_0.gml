@@ -37,12 +37,12 @@ if (mining != noone) {
     } else {
 		switch (mining.object_index) {
 		case obj_gem:
-			gems++
-			tocar_som("minerio")
+			gems += 1 + mining.gem_id
+			tocar_som(som_minerio)
 			break
 		case obj_grave:
 			gems += 10
-			tocar_som("minerio")
+			tocar_som(som_minerio)
 			break
 		case obj_fuel:
 			fuel = min(fuel + 50, fuel_max)
@@ -156,7 +156,7 @@ if (y >= intro_y) {
 
 if (dead > 0) {
 	audio_stop_sound(global.musica_atual);
-    tocar_som("morte")
+    tocar_som(som_morte)
 	audio_stop_sound(global.musica_atual);
 	global.musica_atual = -1;
 	global.musica_recurso = -1;

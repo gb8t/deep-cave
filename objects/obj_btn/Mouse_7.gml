@@ -3,7 +3,12 @@ with (obj_scroll) {
 		exit
 	}
 }
-tocar_som("click")
+
+if (image_index != 1) {
+	exit
+}
+
+tocar_som(som_click)
 global.reiniciar_musica = true;
-press();
 image_index = 0
+press();

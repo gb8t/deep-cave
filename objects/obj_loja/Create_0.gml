@@ -25,7 +25,6 @@ global.preco_upgrade_sorte = function () {
 //global.money = 100000 // Debug
 show_debug_message("===== STATUS DE MELHORIAS =====");
 show_debug_message("Dinheiro: R$" + string(global.money));
-show_debug_message("Minérios: " + string(global.num_minerios));
 show_debug_message("Nível do Tanque: " + string(global.nivelTanque));
 show_debug_message("Nível do Motor: " + string(global.nivelMotor));
 show_debug_message("Eficiência do Motor: " + string(global.nivelMotorEficiencia));
