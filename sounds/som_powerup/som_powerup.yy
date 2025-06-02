@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"som_powerup.wav",
   "type":0,
-  "volume":0.37,
+  "volume":0.21,
 }
